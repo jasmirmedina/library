@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <link rel="stylesheet" href="src/styles.css">
+  <script src="src/main.js" defer></script>
+</head>
+<body>
+  <dialog>
+    <form id="book-data">
+      <div>
+        <label for="book-title">Title:</label>
+        <input type="text" id="book-title" placeholder="One Hundred Years of Solitude">
+      </div>
+
+      <div>
+        <label for="book-author">Author:</label>
+        <input type="text" id="book-author" placeholder="Gabriel García Márquez">
+      </div>
+
+      <div>
+        <label for="book-pages">Pages:</label>
+        <input type="number" id="book-pages" placeholder="417">
+      </div>
+
+      <div>
+        <label for="book-readed">Readed:</label>
+        <select name="book-readed-option" id="book-readed">
+          <option value="true">Yes</option>
+          <option value="false" selected>No</option>
+        </select>
+      </div>
+    </form>
+
+    <div class="book-data-btns">
+      <button type="submit" form="book-data" id="book-data-add-btn">Add</button>
+      <button type="button" id="book-data-cancel-btn">Cancel</button>
+    </div>
+  </dialog>
+
+  <div class="container">
+    <h1>Library</h1>
+
+    <div class="books"></div>
+
+    <div>
+      <button type="button" class="add-book-btn"><img src="assets/icons/plus.svg" alt="Plus Icon" width="25px"></button>
+    </div>
+  </div>
+</body>
+</html>

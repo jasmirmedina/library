@@ -1,0 +1,139 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  font-family: system-ui;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 95%;
+  gap: 10%;
+  padding: 20px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.container > h1 {
+  font-size: 2rem;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 250px;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.book-btns {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.book-btns > button,
+.add-book-btn,
+.book-data-btns > button {
+  background-color: #61616150;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.add-book-btn {
+  display: flex;
+  padding: 5px 20px;
+}
+
+.book-btns > button:hover,
+.add-book-btn:hover,
+.book-data-btns > button:hover {
+  background-color: #61616138;
+  transition-duration: 200ms;
+}
+
+dialog[open] {
+  box-sizing: border-box;
+  resize: both;
+  display: inline-flex;
+  min-width: min-content;
+  min-height: min-content;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 6px 1px rgba(182, 182, 182, 0.4);
+}
+
+dialog[open]::backdrop {
+  backdrop-filter: blur(4px);
+}
+
+#book-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+  gap: 20px;
+}
+
+#book-data > div > input {
+  background-color: transparent;
+  outline: none;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #ffffff73;
+  color: #fff;
+  width: 100%;
+}
+
+#book-data > div:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#book-data > div:nth-child(4) > select {
+  cursor: pointer;
+}
+
+#book-readed {
+  width: 100%;
+  padding: 5px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.book-data-btns {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
